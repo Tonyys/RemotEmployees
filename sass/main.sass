@@ -1,0 +1,43 @@
+// vars
+$black-text: #111111
+$white-text: #fff
+$blue: #67AEFC
+$light-blue: #DAECFF
+$purple: #6D79EF
+$green: #75E169
+
+@import "header"
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  font-family: 'Montserrat',sans-serif
+  line-height: 1.25
+  font-size: 18px
+  color: $black-text
+a
+  text-decoration: none
+  color: $white-text
+.container
+  max-width: 1289px
+  width: 100%
+  margin: 0 auto
+  padding: 0 60px
+.btn
+  background-color: $green
+  font-size: 15px
+  font-weight: 700
+  color: $white-text
+  text-transform: uppercase
+  text-align: center
+  border-radius: 5px
+  border: 2px solid transparent
+  transition-duration: .5s
+  &:hover
+    border: 2px solid #fff
+  &:active
+    background-color: #fff
+    color: $blue
