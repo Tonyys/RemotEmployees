@@ -7,6 +7,13 @@ $purple: #6D79EF
 $green: #75E169
 
 @import "header"
+@import "intro"
+@import "info"
+@import "stages"
+@import "example"
+@import "more"
+@import "contact"
+@import "footer"
 
 
 *
@@ -21,6 +28,8 @@ body
 a
   text-decoration: none
   color: $white-text
+section
+  overflow: hidden
 .container
   max-width: 1289px
   width: 100%
@@ -37,7 +46,7 @@ a
   border: 2px solid transparent
   transition-duration: .5s
   &:hover
-    border: 2px solid #fff
+    border: 2px solid $blue
   &:active
-    background-color: #fff
-    color: $blue
+    background-color: $blue
+    color: white
