@@ -12,7 +12,7 @@ accordeonItem.forEach((currentTab) =>{
         currentTab.classList.contains("active") ? hiddenPart.style.maxHeight = hiddenPartHeight + 'px' : hiddenPart.style.maxHeight = null
     })
 })
-//Swiper
+//Swipers
 const swiper = new Swiper('.stages__swiper', {
     slidesPerView: 1.7,
     spaceBetween: 25,
@@ -20,7 +20,66 @@ const swiper = new Swiper('.stages__swiper', {
         nextEl: '.stages__next',
         prevEl: '.stages__prev',
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 1.1
+        },
+        900: {
+            slidesPerView: 1.2
+        },
+        1024: {
+            slidesPerView: 1.4
+        },
+        1200: {
+            slidesPerView: 1.5
+        },
+        1280: {
+            slidesPerView: 1.7
+        }
+    }
 });
+
+const swiperExample = new Swiper('.swiper__example', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
+
+// Smooth scroll
+const headerLinks = document.querySelectorAll('.header__link')
+headerLinks.forEach(function (currentItem) {
+    currentItem.addEventListener('click',(e) =>{
+        e.preventDefault()
+        let itemAttr = currentItem.getAttribute("data-scroll")
+        let currentSection = document.querySelector(itemAttr)
+        document.querySelector('.header .mobile').classList.remove('active')
+
+        scrollTo(currentSection)
+    })
+})
+
+function scrollTo(element) {
+    window.scroll({
+        left: 0,
+        top: element.offsetTop - 50,
+        behavior: 'smooth'
+    })
+}
+
+// Burger
+const burger = document.querySelector('.burger')
+const mobileMenu = document.querySelector('.mobile')
+
+burger.addEventListener('click',() =>{
+    mobileMenu.classList.toggle('active')
+    document.querySelector('body').classList.toggle('overflow')
+})
+
 // Validate
 
 let inpName = document.querySelector('input[type="text"]')

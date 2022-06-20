@@ -1,6 +1,8 @@
 .footer
   padding: 100px 0 80px 0
   background-color: $blue
+  @media (max-width: 425px)
+    padding: 45px 25px
   &__inner
     display: flex
     flex-direction: column
@@ -10,26 +12,61 @@
     width: 100%
     display: flex
     justify-content: space-between
+    @media (max-width: 700px)
+      flex-direction: column
+      margin-bottom: 20px
   &__left
     display: flex
     flex-direction: column
+    @media (max-width: 425px)
+      width: 100%
+      align-items: center
   &__logo
     margin-bottom: 45px
     max-width: 280px
     width: 100%
+    @media (max-width: 900px)
+      max-width: 200px
+    @media (max-width: 700px)
+      margin-bottom: 30px
+      max-width: 250px
+    @media (max-width: 425px)
+      max-width: 280px
+      margin-bottom: 20px
   &__img
     width: 100%
     height: 100%
   &__social
     display: flex
     justify-content: space-between
+    @media (max-width: 700px)
+      display: none
   &__item
+    width: 28px
+    height: 26px
+    display: flex
+    justify-content: center
+    align-items: center
+    @media (max-width: 768px)
+      width: 24px
+      height: 22px
+    @media (max-width: 425px)
+      width: 30px
+      height: 30px
+    svg
+      width: 100%
+      height: 100%
     &:not(:last-child)
       margin-right: 38px
+      @media (max-width: 900px)
+        margin-right: 15px
   &__center
     margin-top: 26px
     display: flex
     flex-direction: column
+    @media (max-width: 700px)
+      margin-top: 0
+      margin-left: 9px
   &__person
     display: flex
     align-items: center
@@ -37,17 +74,31 @@
       margin-top: -5px
       width: 30px
       height: 30px
+      @media (max-width: 425px)
+        width: 37px
+        height: 37px
+        margin-right: 5px
     span
       font-size: 20px
       font-weight: 400
       color: white
+      @media (max-width: 900px)
+        font-size: 16px
+      @media (max-width: 425px)
+        line-height: 1.375
     &:not(:last-child)
       margin-bottom: 10px
+      @media (max-width: 425px)
+        margin-bottom: 6px
   &__link
     margin-top: 26px
     font-size: 20px
     font-weight: 400
     color: white
+    @media (max-width: 900px)
+      font-size: 18px
+    @media (max-width: 700px)
+      margin-top: 40px
   &__bottom
     margin: 0 auto
     display: flex
@@ -58,3 +109,19 @@
     font-weight: 400
     line-height: 1.25
     color: white
+    text-align: center
+    @media (max-width: 900px)
+      font-size: 16px
+    @media (max-width: 768px)
+      font-size: 14px
+  &__mobile
+    margin-top: 60px
+    max-width: 250px
+    width: 100%
+    display: none
+    justify-content: space-between
+    @media (max-width: 700px)
+      display: flex
+    @media (max-width: 425px)
+      width: 100%
+      max-width: none

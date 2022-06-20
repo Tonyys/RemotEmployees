@@ -25,16 +25,27 @@ body
   line-height: 1.25
   font-size: 18px
   color: $black-text
+  @media (max-width: 375px)
+    min-width: 375px
+  &.overflow
+    @media (max-width: 600px)
+      overflow: hidden
 a
   text-decoration: none
   color: $white-text
+img
+  display: block
 section
   overflow: hidden
+  @media (max-width: 425px)
+    overflow: visible
 .container
   max-width: 1289px
   width: 100%
   margin: 0 auto
   padding: 0 60px
+  @media (max-width: 600px)
+    padding: 0 20px
 .btn
   background-color: $green
   font-size: 15px
